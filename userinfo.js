@@ -4,10 +4,10 @@ module.exports = {
     name: 'userinfo',
     description: 'Ao usar o comando, o membro terá informações dele mesmo ou de um membro que ele marcar com o comando.',
     async execute(message, args) {
-        const moment = require('moment');
-        moment.locale('pt-br');
+        const moment = require('moment'); 
+        moment.locale('pt-br'); 
 
-        const usuario = message.mentions.users.first() || message.author;
+        const usuario = message.mentions.users.first() || message.author; 
         const membro = message.guild.members.cache.get(usuario.id);
 
         const buscarUsuario = usuario.bot ? ':robot:' : ':person_raising_hand:';
